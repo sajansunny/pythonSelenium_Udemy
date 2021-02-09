@@ -10,3 +10,4 @@ print("{}{}".format("The value is ", b))
 print(type(b))
 print(type(c))
 print(type(d))
+
