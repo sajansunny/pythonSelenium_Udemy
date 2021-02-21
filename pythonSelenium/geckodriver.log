@@ -49,3 +49,28 @@ JavaScript error: https://www.udemy.com/staticx/udemy/js/webpack/entry-udlite-ba
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1613699736449	geckodriver	INFO	Listening on 127.0.0.1:49964
+1613699739471	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\sajan\\AppData\\Local\\Temp\\rust_mozprofileLDKBLF"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613699807074	Marionette	INFO	Listening on port 49982
+[Parent 12788, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 12788, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1613699968422	Marionette	INFO	Stopped listening on port 49982
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613699988529	geckodriver	INFO	Listening on 127.0.0.1:50226
+1613699993416	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\sajan\\AppData\\Local\\Temp\\rust_mozprofile9EQ0er"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613700020071	Marionette	INFO	Listening on port 50237
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 773))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 422))
+1613700022540	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613700022650	Marionette	ERROR	[15] No reply from Marionette:Register
+1613700038735	Marionette	INFO	Stopped listening on port 50237
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
