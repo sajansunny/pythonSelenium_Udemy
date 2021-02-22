@@ -1,5 +1,8 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 driver = webdriver.Chrome()
 driver.get("https://rahulshettyacademy.com/seleniumPractise/")
@@ -19,3 +22,10 @@ assert len(add_buttons) == int(driver.find_element_by_xpath("//div[@class='cart-
 
 driver.find_element_by_xpath("//a[@class='cart-icon']").click()
 driver.find_element_by_xpath("//button[text()='PROCEED TO CHECKOUT']").click()
+wait = WebDriverWait(driver, 5)
+wait.until(expected_conditions.presence_of_element_located((By.CLASS_NAME, "promoCode")))
+driver.find_element_by_class_name("promoCode").send_keys("rahulshettyacademy")
+driver.find_element_by_css_selector(".promoBtn").click()
+wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".promoInfo")))
+print(driver.find_element_by_css_selector(".promoInfo").text)
+
