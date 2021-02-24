@@ -30,9 +30,30 @@ for web_cart_item in web_cart_items:
 print(cart_items)
 assert items == cart_items
 
+
+#item_total_rows = driver.find_elements_by_xpath("//table[@class='cartTable']/tbody/tr/td[5]")
+item_total_rows = driver.find_elements_by_xpath("//tr/td[5]/p")
+
+item_total = 0.0
+for item_total_row in item_total_rows:
+    item_total = (item_total + int(item_total_row.text))
+print(item_total)
+
+total_amt = float(driver.find_element_by_xpath("//span[@class='totAmt']").text)
+print(total_amt)
+assert item_total == total_amt
+
 driver.find_element_by_class_name("promoCode").send_keys("rahulshettyacademy")
 driver.find_element_by_css_selector(".promoBtn").click()
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".promoInfo")))
 print(driver.find_element_by_css_selector(".promoInfo").text)
+total_aft_dis = float(driver.find_element_by_xpath("//span[@class='discountAmt']").text)
+discount_per_act = driver.find_element_by_xpath("//span[@class='discountPerc']").text
+print(discount_per_act[0:2])
+
+discount_per = int(((total_amt - total_aft_dis)/total_amt)*100)
+print(discount_per)
+
+assert discount_per == int(discount_per_act[0:2])
 driver.close()
 
