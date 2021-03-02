@@ -1,4 +1,7 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 driver = webdriver.Chrome()
 driver.implicitly_wait(5)
@@ -11,8 +14,14 @@ for product_name in product_names:
         break
 driver.find_element_by_xpath("//a[@class = 'nav-link btn btn-primary']").click()
 driver.find_element_by_xpath("//button[@class='btn btn-success']").click()
-driver.find_element_by_xpath("//input[@id='country']").send_keys("India")
+driver.find_element_by_xpath("//input[@id='country']").send_keys("Ind")
+wait = WebDriverWait(driver, 7)
+wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))
+driver.find_element_by_link_text("India").click()
 
 checkbox = driver.find_element_by_xpath("//input[@id='checkbox2']")
 driver.execute_script("arguments[0].click();", checkbox)
 driver.find_element_by_xpath("//input[@type='submit']").click()
+assert "Thank you" in driver.find_element_by_class_name("alert-success").text
+driver.get_screenshot_as_file("endToEnd.png")
+driver.close()
