@@ -1,0 +1,10 @@
+2021-03-05 06:59:40,418 : INFO : PyTestDemo.baseClass : Sajan
+2021-03-05 06:59:40,418 : INFO : PyTestDemo.baseClass : sajansunny.com
+2021-03-05 07:05:16,024 : INFO : test_editprofile : Sajan
+2021-03-05 07:05:16,024 : INFO : test_editprofile : sajansunny.com
+2021-03-05 07:11:01,331 : INFO : test_editprofile : Sajan
+2021-03-05 07:11:01,331 : INFO : test_editprofile : sajansunny.com
+2021-03-05 07:11:01,364 : CRITICAL : PyTestDemo.test_logger : A critical error happened in your test
+2021-03-05 07:14:26,414 : INFO : test_editprofile : Sajan
+2021-03-05 07:14:26,414 : INFO : test_editprofile : sajansunny.com
+2021-03-05 07:14:26,422 : CRITICAL : PyTestDemo.test_logger : A critical error happened in your test
